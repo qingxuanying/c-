@@ -18,14 +18,25 @@ class String{
             strcpy(string,str);
             L=strlen(str);
         }
+        void toUppercase(){
+            int i=0;
+            while(string[i]!='\0'){
+                if(string[i]>='a' && string[i]<='z'){
+                    string[i]=string[i]-32;
+                    cout<<string[i];
+                }
+                i++;
+            }
+            cout<<endl;
+        }
         int str2num(){
             int num=0;
             int j=1,k;
             for(int i=L-1;i>=0;i--){
                 char tmp=string[i];
                 if(tmp>'9' || tmp<'0'){
-                    cout<<"输入非法"<<endl;
-                    exit(-1);
+                    cout<<"无法转换"<<endl;
+                    return -1;
                 }
                 else{
                     k=tmp-'0';
@@ -79,7 +90,7 @@ int main(){
     strcpy(s,"abcdefg");
     String str(s);
     String str1("bcd");
-    String str2("5421");
+    String str2("54210");
     if(str.IsSubstring("fg")){
         cout<<"ture"<<endl;
     }
@@ -94,5 +105,6 @@ int main(){
         cout<<"false"<<endl;
     }
     cout<<str2.str2num()<<endl;
+    str.toUppercase();
     return 0;
 }

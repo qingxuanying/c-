@@ -32,7 +32,7 @@ class Student{
             avesub2 += sc2;
             avesub3 += sc3;
             ave=sc1+sc2+sc3;
-        };
+        }
         double getsubAve(int i){
             if(i==1){
                 return avesub1/num;
@@ -40,7 +40,7 @@ class Student{
             if(i==2){
                 return avesub2/num;
             }
-            if(i==3){
+            else{
                 return avesub3/num;
             }
         }
@@ -63,7 +63,7 @@ int main(){
     strcpy(sub3,"物理");
     Student s1(1,name,sub1,150,sub2,150,sub3,60);
     Student s2(2,name,sub1,130,sub2,120,sub3,68);
-    cout<<s1.getStudentAve()<<endl;
-    cout<<s1.getsubAve(1)<<' '<<s1.getsubAve(2)<<' '<<s1.getsubAve(3)<<endl;
+    cout<<"学生平均成绩"<<s1.getStudentAve()<<endl;
+    cout<<"各课程班平均成绩"<<s1.getsubAve(1)<<' '<<s1.getsubAve(2)<<' '<<s1.getsubAve(3)<<endl;
     return 0;
 }
