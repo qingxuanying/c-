@@ -60,6 +60,7 @@ int main()
 {
     Stack S;
     char cs,min;
+    cout<<"请输入你想要入栈的字符，按下回车键停止输入"<<endl;
     while (1)
     {
         scanf("%c",&cs);
@@ -70,7 +71,7 @@ int main()
         S.push(cs);
     }
     S.pop(cs);
-    cout << cs << endl;
+    cout <<"栈尾出栈:"<< cs << endl;
     S.min(min);
-    cout<<min<<endl;
+    cout<<"最小的字符:"<<min<<endl;
 }

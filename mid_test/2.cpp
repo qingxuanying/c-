@@ -91,6 +91,6 @@ int main()
 {
     Circle s(0, 0, 3);
     Cylinder cy1(0, 0, 1, 1);
-    cout << s.getCircleS() << endl;
-    cout << cy1.getCylinderS() << endl;
+    cout <<"圆的面积是:"<< s.getCircleS() << endl;
+    cout <<"圆柱的表面积是:"<< cy1.getCylinderS() << endl;
 }
